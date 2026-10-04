@@ -4,7 +4,7 @@
 
 *本文为译文。如与英文版 README 存在出入，以英文版为准。*
 
-[![ci](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml)
+[![ci](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml)
 
 **为你的游戏组建一支试玩测试小组：机器人玩家、AI 人设试玩员，外加一份按优先级排序的报告。**
 目前支持 Web 游戏、Unity 和 Godot。它既是一个 [Claude Code](https://claude.com/claude-code) 技能（skill），也是一个零依赖的 Node CLI。
@@ -47,7 +47,7 @@
 - **报告生成器**
   - 人设发现的问题在被复现之前一律标记为**未验证**，且不计入结论。
   - 机器人的发现可以按种子复现，因此立即生效。
-- **可选的 [ai-game-studio](https://github.com/mhwangbo/ai-game-studio) 集成**
+- **可选的 [ai-game-studio](https://github.com/miandbits/ai-game-studio) 集成**
   - 将摘要同步到工作室的 `#qa` 聊天频道。
   - 工作室的试玩测试关卡会把 `suggestedTicket` 转成工单。
   - 可通过 `integrations.gameStudio: "off"` 关闭。
@@ -65,7 +65,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/mhwangbo/playtest-lab.git
+git clone https://github.com/miandbits/playtest-lab.git
 cd playtest-lab && npm test          # no dependencies; Node 20+
 ```
 
@@ -97,7 +97,7 @@ node lab/lab.js --game path/to/game serve --root dist --port 8120
 
 1. 添加包：
    ```json
-   "com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+   "com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
    ```
 2. **机器人：** 实现一个 `IPlaytestTarget`（用种子重置、执行动作、观察、判断结束、输出指标），打一个 Windows 包，并让适配器指向它：
    ```js

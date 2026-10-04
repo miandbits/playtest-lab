@@ -2,7 +2,7 @@
 
 # playtest-lab
 
-[![ci](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml)
+[![ci](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml)
 
 **A playtest group for your game: bot players, AI persona playtesters, and a prioritized report.**
 It works with web games, Unity and Godot today. It is a [Claude Code](https://claude.com/claude-code) skill and also a zero-dependency Node CLI.
@@ -45,7 +45,7 @@ Both write into one versioned report: `playtest-report.json` plus `report.md`. I
 - **Report builder**
   - Persona issues stay **unverified**, and out of the verdict, until someone reproduces them.
   - Bot findings count immediately because they reproduce by seed.
-- **Optional [ai-game-studio](https://github.com/mhwangbo/ai-game-studio) integration**
+- **Optional [ai-game-studio](https://github.com/miandbits/ai-game-studio) integration**
   - Mirrors summaries into the studio's `#qa` chat.
   - The studio's playtest gate turns `suggestedTicket`s into tickets.
   - Turn it off with `integrations.gameStudio: "off"`.
@@ -63,7 +63,7 @@ Both write into one versioned report: `playtest-report.json` plus `report.md`. I
 ## Install
 
 ```bash
-git clone https://github.com/mhwangbo/playtest-lab.git
+git clone https://github.com/miandbits/playtest-lab.git
 cd playtest-lab && npm test          # no dependencies; Node 20+
 ```
 
@@ -95,7 +95,7 @@ Then spawn a persona with the prompt in [SKILL.md §3b](SKILL.md). Write a `.pla
 
 1. Add the package:
    ```json
-   "com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+   "com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
    ```
 2. **Bots:** implement one `IPlaytestTarget` (reset with a seed, apply action, observe, done, metrics), make a Windows build, and point the adapter at it:
    ```js

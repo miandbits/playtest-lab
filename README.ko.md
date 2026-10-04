@@ -4,7 +4,7 @@
 
 *이 문서는 번역본입니다. 영어 README와 내용이 다를 경우 영어 버전이 우선합니다.*
 
-[![ci](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml)
+[![ci](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml)
 
 **여러분의 게임을 위한 플레이테스트 그룹: 봇 플레이어, AI 페르소나 플레이테스터, 그리고 우선순위가 매겨진 리포트.**
 현재 웹 게임, Unity, Godot을 지원합니다. [Claude Code](https://claude.com/claude-code) 스킬이면서, 의존성이 전혀 없는 Node CLI이기도 합니다.
@@ -47,7 +47,7 @@
 - **리포트 빌더**
   - 페르소나가 제기한 이슈는 누군가 재현하기 전까지 **미검증** 상태로 남으며 판정에서 제외됩니다.
   - 봇의 발견 사항은 시드로 재현되므로 즉시 반영됩니다.
-- **선택 사항: [ai-game-studio](https://github.com/mhwangbo/ai-game-studio) 연동**
+- **선택 사항: [ai-game-studio](https://github.com/miandbits/ai-game-studio) 연동**
   - 요약을 스튜디오의 `#qa` 채팅에 미러링합니다.
   - 스튜디오의 플레이테스트 게이트가 `suggestedTicket`을 티켓으로 변환합니다.
   - `integrations.gameStudio: "off"`로 끌 수 있습니다.
@@ -65,7 +65,7 @@
 ## 설치
 
 ```bash
-git clone https://github.com/mhwangbo/playtest-lab.git
+git clone https://github.com/miandbits/playtest-lab.git
 cd playtest-lab && npm test          # no dependencies; Node 20+
 ```
 
@@ -97,7 +97,7 @@ node lab/lab.js --game path/to/game serve --root dist --port 8120
 
 1. 패키지를 추가합니다.
    ```json
-   "com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+   "com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
    ```
 2. **봇:** `IPlaytestTarget` 하나를 구현하고(시드로 리셋, 액션 적용, observe, done, metrics), Windows 빌드를 만든 뒤 어댑터가 그 빌드를 가리키게 합니다.
    ```js

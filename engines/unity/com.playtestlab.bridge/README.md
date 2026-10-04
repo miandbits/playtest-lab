@@ -7,7 +7,7 @@ This package lets Playtest Lab bots play a Unity game headless over localhost, u
 In `Packages/manifest.json`:
 
 ```json
-"com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+"com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
 ```
 
 ## 2. Implement one target

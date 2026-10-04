@@ -4,7 +4,7 @@
 
 *この文書は翻訳です。英語版 README と内容が異なる場合は、英語版が優先されます。*
 
-[![ci](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml)
+[![ci](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml)
 
 **あなたのゲームのためのプレイテストグループ：ボットプレイヤー、AI ペルソナのプレイテスター、そして優先度付きのレポート。**
 現在は Web ゲーム、Unity、Godot に対応しています。[Claude Code](https://claude.com/claude-code) のスキルであると同時に、依存関係ゼロの Node CLI でもあります。
@@ -47,7 +47,7 @@
 - **レポートビルダー**
   - ペルソナが報告した問題は、誰かが再現するまで **未検証** として扱われ、判定には含まれません。
   - ボットの検出結果はシードで再現できるため、即座にカウントされます。
-- **オプションの [ai-game-studio](https://github.com/mhwangbo/ai-game-studio) 連携**
+- **オプションの [ai-game-studio](https://github.com/miandbits/ai-game-studio) 連携**
   - サマリーをスタジオの `#qa` チャットにミラーリングします。
   - スタジオのプレイテストゲートが `suggestedTicket` をチケットに変換します。
   - `integrations.gameStudio: "off"` で無効にできます。
@@ -65,7 +65,7 @@
 ## インストール
 
 ```bash
-git clone https://github.com/mhwangbo/playtest-lab.git
+git clone https://github.com/miandbits/playtest-lab.git
 cd playtest-lab && npm test          # no dependencies; Node 20+
 ```
 
@@ -97,7 +97,7 @@ node lab/lab.js --game path/to/game serve --root dist --port 8120
 
 1. パッケージを追加します。
    ```json
-   "com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+   "com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
    ```
 2. **ボット：** `IPlaytestTarget` を 1 つ実装し（シードでのリセット、アクションの適用、observe、done、metrics）、Windows ビルドを作成して、アダプターからそれを指定します。
    ```js

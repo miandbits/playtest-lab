@@ -4,7 +4,7 @@
 
 _Esta es una traducción. Si difiere del README en inglés, prevalece la versión en inglés._
 
-[![ci](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/mhwangbo/playtest-lab/actions/workflows/ci.yml)
+[![ci](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/miandbits/playtest-lab/actions/workflows/ci.yml)
 
 **Un grupo de playtest para tu juego: bots jugadores, personas de IA que prueban el juego y un informe priorizado.**
 Hoy funciona con juegos web, Unity y Godot. Es una skill de [Claude Code](https://claude.com/claude-code) y también una CLI de Node sin dependencias.
@@ -47,7 +47,7 @@ Ambos escriben en un único informe versionado: `playtest-report.json` más `rep
 - **Generador de informes**
   - Los problemas reportados por personas quedan como **no verificados**, y fuera del veredicto, hasta que alguien los reproduzca.
   - Los hallazgos de los bots cuentan de inmediato porque se reproducen por semilla.
-- **Integración opcional con [ai-game-studio](https://github.com/mhwangbo/ai-game-studio)**
+- **Integración opcional con [ai-game-studio](https://github.com/miandbits/ai-game-studio)**
   - Replica los resúmenes en el chat `#qa` del estudio.
   - La puerta de playtest del estudio convierte los `suggestedTicket`s en tickets.
   - Se desactiva con `integrations.gameStudio: "off"`.
@@ -65,7 +65,7 @@ Ambos escriben en un único informe versionado: `playtest-report.json` más `rep
 ## Instalación
 
 ```bash
-git clone https://github.com/mhwangbo/playtest-lab.git
+git clone https://github.com/miandbits/playtest-lab.git
 cd playtest-lab && npm test          # no dependencies; Node 20+
 ```
 
@@ -97,7 +97,7 @@ Luego lanza una persona con el prompt de [SKILL.md §3b](SKILL.md). Escribe un `
 
 1. Añade el paquete:
    ```json
-   "com.playtestlab.bridge": "https://github.com/mhwangbo/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
+   "com.playtestlab.bridge": "https://github.com/miandbits/playtest-lab.git?path=/engines/unity/com.playtestlab.bridge"
    ```
 2. **Bots:** implementa un `IPlaytestTarget` (reiniciar con una semilla, aplicar una acción, observar, terminado, métricas), genera una build de Windows y apunta el adaptador hacia ella:
    ```js

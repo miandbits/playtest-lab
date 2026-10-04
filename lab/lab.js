@@ -106,7 +106,7 @@ class Lab {
   }
 
   /**
-   * Optional integration with ai-game-studio (https://github.com/mhwangbo/ai-game-studio): mirror lab
+   * Optional integration with ai-game-studio (https://github.com/miandbits/ai-game-studio): mirror lab
    * activity into the studio's #qa chat. config.integrations.gameStudio = 'auto' (default: only when the game
    * folder or its parent has a .studio/ and the studio skill is installed) | 'off' | '<path to studio.js>'.
    * PLAYTEST_STUDIO_CLI overrides the path. The lab never depends on it: reports are the real interface.
